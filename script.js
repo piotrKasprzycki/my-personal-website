@@ -19,4 +19,8 @@ typewriter
   .typeString("I make Neapolitan pizza.")
   .pauseFor(1000)
   .deleteChars(24)
+  .pauseFor(300)
+  .typeString("I do sports.")
+  .pauseFor(1000)
+  .deleteChars(12)
   .start();

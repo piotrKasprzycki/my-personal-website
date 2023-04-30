@@ -59,3 +59,29 @@ ul li a:hover {
 .Typewriter__wrapper {
   color: var(--neon-blue);
 }
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#about-wrapper {
+  display: grid;
+  grid-template-columns: 200px 400px;
+  width: 600px;
+}
+
+#about-wrapper h2 {
+  font-size: 1.4rem;
+}
+
+#about-wrapper p {
+  grid-column: 2;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+#about-wrapper p span {
+  color: var(--neon-blue);
+}
