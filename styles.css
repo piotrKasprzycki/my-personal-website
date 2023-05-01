@@ -18,20 +18,20 @@ nav {
   width: 100%;
 }
 
-ul {
+nav ul {
   display: flex;
   justify-content: right;
   align-items: center;
   height: 64px;
 }
 
-ul li a {
+nav ul li a {
   font-size: 1.1rem;
   margin: 0 32px;
   padding: 4px 0;
 }
 
-ul li a:hover {
+nav ul li a:hover {
   border-bottom: 3px solid var(--neon-blue);
 }
 
@@ -44,6 +44,7 @@ ul li a:hover {
 
 #home-wrapper {
   margin-bottom: 64px;
+  margin-right: 36%;
 }
 
 #home-wrapper h1 {
@@ -64,24 +65,106 @@ ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  height: calc(100vh - 128px);
 }
 
 #about-wrapper {
   display: grid;
   grid-template-columns: 200px 400px;
   width: 600px;
+  margin-top: 128px;
 }
 
 #about-wrapper h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 #about-wrapper p {
   grid-column: 2;
   margin-bottom: 16px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 #about-wrapper p span {
   color: var(--neon-blue);
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#projects-wrapper {
+  display: grid;
+  grid-template-columns: 200px 400px;
+  width: 600px;
+  margin-top: 128px;
+}
+
+#projects-wrapper h2 {
+  font-size: 1.6rem;
+}
+
+#projects-wrapper h3 {
+  font-size: 1.4rem;
+}
+
+#projects-wrapper p {
+  font-size: 1.2rem;
+}
+
+#projects-wrapper ul li {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+#projects-wrapper ul li img {
+  width: 400px;
+  border: 1px solid black;
+  margin-bottom: 8px;
+}
+
+#projects-wrapper ul li img:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#contact-wrapper {
+  display: grid;
+  grid-template-columns: 200px 400px;
+  width: 600px;
+  margin-top: 128px;
+}
+
+#contact-wrapper h2 {
+  font-size: 1.6rem;
+}
+
+#contact-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contact-links a {
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+#contact-links a i {
+  margin-right: 8px;
+  color: var(--neon-blue);
+}
+
+footer {
+  margin-top: 64px;
+  padding: 8px 0;
+  text-align: center;
 }

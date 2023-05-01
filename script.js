@@ -1,4 +1,6 @@
 const passionSpan = document.querySelector("#passion");
+const form = document.querySelector("#form");
+const email = document.querySelector("#email");
 
 const typewriter = new Typewriter(passionSpan, {
   loop: true,

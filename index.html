@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <script type="module" src="script.js" defer ></script>
+    <script type="module" src="script.js" defer></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://kit.fontawesome.com/ff68fdbb23.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -42,50 +43,60 @@
        
       </section>
 
-      <section id="Projects">
-        <h2>My Work</h2>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="" alt="Project Title" />
-              <h3>Project Title</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="" alt="Project Title" />
-              <h3>Project Title</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="" alt="Project Title" />
-              <h3>Project Title</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="" alt="Project Title" />
-              <h3>Project Title</h3>
-            </a>
-          </li>
-        </ul>
-        <span>Checkout my github for more projects</span>
+      <section id="projects">
+        <div id="projects-wrapper">
+          <h2>My Work</h2>
+          <ul>
+            <li>
+              <a href="https://gym-track-app-851ed3.netlify.app" target="_blank" onclick="window.open('https://github.com/piotrKasprzycki/gym-track-app');
+              return true;">
+                <img src="imgaes/gym-track-app.png" alt="Project Title"/>
+                <h3>Gym Track App</h3>
+                <p>Web application built using JavaScript, HTML and CSS that allows gym-goers to track their workouts and progress.</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://avocado-armchairs-shop-0b568e.netlify.app" target="_blank" onclick="window.open('https://github.com/piotrKasprzycki/avocado-armchairs-shop');
+              return true;">
+                <img src="imgaes/avocado-armchairs-shop.png" alt="Project Title" />
+                <h3>Avocado Armchairs Shop</h3>
+                <p>Page of a fictional shop that allows to add products to cart, edit it and keep track of total cost.</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://one-octave-piano-400795.netlify.app" target="_blank" onclick="window.open('https://github.com/piotrKasprzycki/one-octave-piano');
+              return true;">
+                <img src="imgaes/one-octave-piano.png" alt="Project Title" />
+                <h3>One Octave Piano</h3>
+                <p>Virtual keyboard that simulates the real-life piano keyboard. You can play the piano using your computer keyboard or by clicking on the keys of the virtual keyboard.</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://car-logos-quiz-cbfaf4.netlify.app" target="_blank" onclick="window.open('https://github.com/piotrKasprzycki/car-logos-quiz');
+              return true;">
+                <img src="imgaes/car-logos-quiz.png" alt="Project Title" />
+                <h3>Car Logos Quiz</h3>
+                <p>Quiz in which you answer questions one-by-one and receive instant feedback on your responses.</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="submit-form.php" method="POST">
-          <input type="text" name="name" placeholder="Your Name" />
-          <input type="email" name="email" placeholder="Your Email" />
-          <textarea name="message" placeholder="Your Message"></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+        <div id="contact-wrapper">
+          <h2>Contact Me</h2>
+          <div id="contact-links">
+            <a href="https://www.linkedin.com/in/piotr-kasprzycki-716967270/" id="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i>Piotr Kasprzycki</a>
+            <a href="mailto:piotr.kasprzycki123@gmail.com" id="email"><i class="fa-solid fa-envelope"></i>piotr.kasprzycki123@gmail.com</a>
+            <a href="https://github.com/piotrKasprzycki" id="github" target="_blank"><i class="fa-brands fa-github" ></i>piotrKasprzycki</a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>Created by me</p>
+      <span>Copyright © 2023 | Made by Piotr Kasprzycki</span>
     </footer>
   </body>
 </html>
