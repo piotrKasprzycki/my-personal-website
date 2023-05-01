@@ -12,6 +12,7 @@
   color: black;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
+  text-justify: auto;
 }
 
 nav {
@@ -26,7 +27,7 @@ nav ul {
 }
 
 nav ul li a {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 0 32px;
   padding: 4px 0;
 }
@@ -43,17 +44,30 @@ nav ul li a:hover {
 }
 
 #home-wrapper {
+  display: grid;
+  grid-template-areas:
+    "h1 img"
+    "p img";
+  column-gap: 64px;
   margin-bottom: 64px;
-  margin-right: 36%;
 }
 
 #home-wrapper h1 {
+  grid-area: h1;
   margin-bottom: 16px;
   font-size: 2rem;
 }
 
 #home-wrapper p {
+  grid-area: p;
   font-size: 1.4rem;
+}
+
+#home-wrapper img {
+  grid-area: img;
+  width: 200px;
+  border: 2px solid var(--neon-blue);
+  border-radius: 50%;
 }
 
 #name,
@@ -61,21 +75,34 @@ nav ul li a:hover {
   color: var(--neon-blue);
 }
 
-#about {
+#about,
+#projects,
+#contact {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: calc(100vh - 128px);
 }
 
-#about-wrapper {
+#about {
+  height: calc(100vh - 128px);
+  min-height: 500px;
+}
+
+#about-wrapper,
+#projects-wrapper,
+#contact-wrapper {
   display: grid;
   grid-template-columns: 200px 400px;
   width: 600px;
+}
+
+#about-wrapper {
   margin-top: 128px;
 }
 
-#about-wrapper h2 {
+#about-wrapper h2,
+#projects-wrapper h2,
+#contact-wrapper h2 {
   font-size: 1.6rem;
 }
 
@@ -89,24 +116,12 @@ nav ul li a:hover {
   color: var(--neon-blue);
 }
 
-#projects {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
 #projects-wrapper {
-  display: grid;
-  grid-template-columns: 200px 400px;
-  width: 600px;
   margin-top: 128px;
 }
 
-#projects-wrapper h2 {
-  font-size: 1.6rem;
-}
-
 #projects-wrapper h3 {
+  margin-bottom: 4px;
   font-size: 1.4rem;
 }
 
@@ -121,8 +136,9 @@ nav ul li a:hover {
 
 #projects-wrapper ul li img {
   width: 400px;
-  border: 1px solid black;
   margin-bottom: 8px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 4px -1px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
 }
 
 #projects-wrapper ul li img:hover {
@@ -130,21 +146,8 @@ nav ul li a:hover {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-#contact {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
 #contact-wrapper {
-  display: grid;
-  grid-template-columns: 200px 400px;
-  width: 600px;
-  margin-top: 128px;
-}
-
-#contact-wrapper h2 {
-  font-size: 1.6rem;
+  margin-top: 64px;
 }
 
 #contact-links {
@@ -164,7 +167,134 @@ nav ul li a:hover {
 }
 
 footer {
+  text-align: right;
   margin-top: 64px;
-  padding: 8px 0;
-  text-align: center;
+  margin-right: 16px;
+  padding: 16px 0;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 2559px) {
+  html {
+    font-size: 110%;
+  }
+
+  #home-wrapper img {
+    width: 250px;
+  }
+
+  #about-wrapper,
+  #projects-wrapper,
+  #contact-wrapper {
+    display: grid;
+    grid-template-columns: 300px 500px;
+    width: 800px;
+  }
+
+  #projects-wrapper ul li img {
+    width: 500px;
+  }
+
+  #contact-links a i {
+    margin-right: 12px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  html {
+    font-size: 90%;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    nav {
+      display: none;
+    }
+
+    #home,
+    #about {
+      height: 50vh;
+    }
+
+    #home-wrapper {
+      column-gap: 32px;
+    }
+
+    #home-wrapper img {
+      width: 160px;
+    }
+
+    #about-wrapper,
+    #projects-wrapper,
+    #contact-wrapper {
+      display: grid;
+      grid-template-columns: 33.33% 66.66%;
+      width: 100%;
+      padding: 0 128px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #home {
+    height: 100vh;
+  }
+
+  #about {
+    height: auto;
+  }
+
+  #about-wrapper,
+  #projects-wrapper,
+  #contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  #home-wrapper {
+    grid-template-areas:
+      "img img"
+      "h1 h1"
+      "p p";
+    margin: 64px 0;
+    padding: 0 16px;
+  }
+
+  #home-wrapper h1 {
+    margin-top: 64px;
+  }
+
+  #home-wrapper p {
+    height: 30vh;
+  }
+
+  #home-wrapper img {
+    justify-self: center;
+  }
+
+  #about-wrapper h2,
+  #projects-wrapper h2,
+  #contact-wrapper h2 {
+    margin-bottom: 32px;
+  }
+
+  #projects-wrapper ul li img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  #home-wrapper {
+    margin-top: 64px;
+  }
+
+  #home {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #about {
+    height: auto;
+  }
 }
